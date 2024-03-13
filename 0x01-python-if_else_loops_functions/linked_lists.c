@@ -10,7 +10,7 @@
 
 size_t print_listint(const listint_t *h)
 {
-	const listint *current;
+	const listint_t *current;
 	unsigned int n; /* number of nodes */
 
 	current = h;
@@ -53,7 +53,7 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 		*head = new;
 	else
 	{
-		while (current->nect != NULL)
+		while (current->next != NULL)
 			current = current->next;
 		current->next = new;
 	}
